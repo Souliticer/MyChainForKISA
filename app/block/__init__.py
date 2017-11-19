@@ -54,11 +54,11 @@ class GenesisBlock(object):
         self.type = 'B'
         self.prev_block_id = 'B000000000000'
         self.prev_block_hash = 'block_hash'
-        self.tx_list = 'sechain'
+        self.tx_list = 'woorichain'
         self.timp_stamp = '0000-00-00-00-00-00'
         self.block_id = 'B000000000000'
-        self.merkle_root = 'sogangfinotek2017'
-        self.block_hash = 'sechainfinochain2017'
+        self.merkle_root = 'connecdotsroot'
+        self.block_hash = 'connecdotshash'
         self.nonce = 2010101010
 
 
@@ -83,8 +83,8 @@ def get_genesis_block():
     b.prev_block_id = 'B000000000000'
     b.prev_block_hash = '0'
     b.block_id = 'B000000000000'
-    b.merkle_root = 'mychain'
-    b.block_hash = 'mychain'
+    b.merkle_root = 'woorichain'
+    b.block_hash = 'woorichain'
     b.nonce = 2010101010
 
     return b
