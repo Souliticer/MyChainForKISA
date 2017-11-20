@@ -104,20 +104,29 @@ def list_all_transaction():
 	for t in transaction.get_transactions():
 		time_stamp = datetime.datetime.__str__(t.time_stamp)
 		log.write(
-			"\n========== Transaction ID: "+ t.tx_id +" =========="
+			"\n++++++++++ Transaction ID: "+ t.tx_id +"++++++++++"
 			"\nmessage: "+ t.message +
 			"\ntype: "+ t.type +
 			"\ntime_stamp: "+ time_stamp +
 			"\npub_key: "+ t.pub_key +
 			"\nsignature: "+ t.signature +
-			"\n=====================================================",
+			"\n+++++++++++++++++++++++++++++++++++++++++++++++++++++",
 			logging.DEBUG)
 		# log.write(t, logging.DEBUG)
 
 
 def list_all_block():
 	for b in block.get_all_block():
-		log.write(b, logging.DEBUG)
+		time_stamp = datetime.datetime.__str__(b.time_stamp)
+		log.write(
+			"\n======================= Block ======================="
+			"\nblock_hash: "+ b.block_hash +
+			"\nprev_block_hash: "+ b.prev_block_hash +
+			"\ntype: "+ b.type +
+			"\ntime_stamp: "+ time_stamp +
+			"\nnonce: "+ b.nonce +
+			"\n=====================================================",
+			logging.DEBUG)
 
 
 def set_my_node():
