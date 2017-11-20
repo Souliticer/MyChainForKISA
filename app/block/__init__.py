@@ -23,7 +23,7 @@ class Block(storage.Base):
     block_miner = Column(Integer)
 
     def __init__(self):
-        self.type = 'B'
+        self.type = 'B' # Block을 의미
 
     def __str__(self):
         return self.to_json()

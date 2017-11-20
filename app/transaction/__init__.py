@@ -22,7 +22,7 @@ class Transaction(storage.Base):
 	signature = Column(String)
 
 	def __init__(self):
-		self.type = 'T'
+		self.type = 'T'	# Transaction을 의미
 		self.time_stamp = datetime.datetime.now()
 		self.tx_id = self.type + self.time_stamp.strftime('%Y%m%d%H%M%S')
 		self.pub_key = ''

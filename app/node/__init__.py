@@ -14,7 +14,7 @@ class Node(storage.Base):
 	private_key = Column(String)
 
 	def __init__(self, ip_address):
-		self.type = 'N'
+		self.type = 'N'	# Node를 의미
 		self.ip_address = ip_address
 		self.public_key = ''
 		self.private_key = ''

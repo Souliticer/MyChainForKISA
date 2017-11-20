@@ -9,6 +9,7 @@ from app.communicator import receiver, sender
 from app.consensus.merkle_tree import merkle_tree, merkle_tree_2
 from app.consensus.pow import proof_of_work
 from app.node import Node
+from app.transaction import Transaction
 
 storage.init()
 
@@ -101,7 +102,17 @@ def list_all_node():
 
 def list_all_transaction():
 	for t in transaction.get_transactions():
-		log.write(t, logging.DEBUG)
+		time_stamp = datetime.datetime.__str__(t.time_stamp)
+		log.write(
+			"\n========== Transaction ID: "+ t.tx_id +" =========="
+			"\nmessage: "+ t.message +
+			"\ntype: "+ t.type +
+			"\ntime_stamp: "+ time_stamp +
+			"\npub_key: "+ t.pub_key +
+			"\nsignature: "+ t.signature +
+			"\n=====================================================",
+			logging.DEBUG)
+		# log.write(t, logging.DEBUG)
 
 
 def list_all_block():
