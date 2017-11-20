@@ -104,12 +104,12 @@ def list_all_transaction():
 	for t in transaction.get_transactions():
 		time_stamp = datetime.datetime.__str__(t.time_stamp)
 		log.write(
-			"\n++++++++++ Transaction ID: "+ t.tx_id +"++++++++++"
-			"\nmessage: "+ t.message +
-			"\ntype: "+ t.type +
-			"\ntime_stamp: "+ time_stamp +
-			"\npub_key: "+ t.pub_key +
-			"\nsignature: "+ t.signature +
+			"\n++++++++++ Transaction ID: "+ t.tx_id +" ++++++++++"
+			"\nData: "+ t.message +
+			"\n거래시각: "+ time_stamp +
+			"\n공개키: "+ t.pub_key +
+			"\n서명: "+ t.signature +
+			"\n유형: "+ t.type +
 			"\n+++++++++++++++++++++++++++++++++++++++++++++++++++++",
 			logging.DEBUG)
 		# log.write(t, logging.DEBUG)
@@ -120,11 +120,11 @@ def list_all_block():
 		time_stamp = datetime.datetime.__str__(b.time_stamp)
 		log.write(
 			"\n======================= Block ======================="
-			"\nblock_hash: "+ b.block_hash +
-			"\nprev_block_hash: "+ b.prev_block_hash +
-			"\ntype: "+ b.type +
-			"\ntime_stamp: "+ time_stamp +
-			"\nnonce: "+ b.nonce +
+			"\nBlock Hash: "+ b.block_hash +
+			"\n이전 Block Hash: "+ b.prev_block_hash +
+			"\nBlock 생성시각: "+ time_stamp +
+			"\nNonce: "+ b.nonce +
+			"\n유형: "+ b.type +
 			"\n=====================================================",
 			logging.DEBUG)
 
